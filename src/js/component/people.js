@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 function People(props) {
   return (
     <>
-      <h1>People</h1>
+      <h1 id="peep">People</h1>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
