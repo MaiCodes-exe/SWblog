@@ -52,7 +52,7 @@ export const Home = (props) => {
           </div>
           <div class="carousel-item">
             <img
-              src="https://selectgame.gamehall.com.br/wp-content/uploads/2022/03/LEGO-Star-Wars-A-Saga-Skywalker-930x620.webp"
+              src="https://sm.ign.com/ign_pt/news/l/lego-star-/lego-star-wars-the-skywalker-saga-release-date-revealed-alon_sbd8.jpg"
               class="d-block w-100"
               alt="..."
             />

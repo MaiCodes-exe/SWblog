@@ -26,7 +26,7 @@ box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
 #button1{
     background-color: black;
     margin-right: 25px;
-    font-size: x-large;
+    font-size: large;
 
 }
 
@@ -34,7 +34,7 @@ box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
     background-color: black;
     position: relative;
     margin-right: 20px;
-    font-size: x-large;
+    font-size: large;
 }
 
 #footer{
