@@ -42,8 +42,15 @@ box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
     color: white;
 }
 a{
-    color: yellow;
+    color: #FFE81F;
 }
 #peep{
-    color: yellow;
+    color: #FFE81F;
+    text-align: center;
+}
+
+#plan{
+    color: #FFE81F;
+    text-align: center;
+    
 }

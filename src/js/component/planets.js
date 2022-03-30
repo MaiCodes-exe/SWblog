@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 export default function Planets() {
     return (
       <>
+        <h1 id="plan">Planets</h1>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
