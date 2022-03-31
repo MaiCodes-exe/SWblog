@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     actions: {
       // Use getActions to call a function within a fuction
       getPeople: async() => {
-        let res = await fetch("https://www.swapi.tech/api/people");
+        let res = await fetch("https://swapi.dev/api/people");
         let data = await res.json();
 			setStore({ people: data.results });
       },
