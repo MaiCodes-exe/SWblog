@@ -3,7 +3,6 @@ import { Home } from "../views/home";
 import { Context } from "../store/appContext";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import PropTypes from "prop-types";
 
 function People() {
   const { store, actions } = useContext(Context);
@@ -18,18 +17,20 @@ function People() {
       <div className="d-flex">
       {people.length > 0 && people.map((item, index) => {
         return (
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "30rem" }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               <Card.Title> {item.name} </Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                <p>Height: {item.height} </p>
+                <p>Mass: {item.mass} </p>
+                <p>Birth Year: {item.birth_year} </p>
+                <p>Gender: {item.gender} </p>
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="warning">Learn More</Button>
             </Card.Body>
           </Card>
-          )
+        );
           })}
     </div>
     </>
@@ -38,10 +39,3 @@ function People() {
 
 export default People;
 
-// People.propTypes = {
-//   iud: PropTypes.number,
-//   name: PropTypes.string,
-//   height: PropTypes.string,
-//   homeworld: PropTypes.string,
-//   description: PropTypes.string,
-// };

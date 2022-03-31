@@ -10,21 +10,10 @@ import { Container } from "react-bootstrap";
 export const Home = (props) => {
 	const [people, setPeople] = useState([]);
 	const [planets, setPlanets] = useState([]);
-	// const [loading, setLoading] = useState(true);
-	// async function fetchPeople(props) {
-	// 	let res = await fetch("https://www.swapi.tech/api/people");
-	// 	let data = await res.json();
-	// 	setPeople(data.results)
-	// }
-	async function fetchPlanets() {
-		let res = await fetch("https://www.swapi.tech/api/planets");
-		let data = await res.json();
-		setPlanets(data.results)
-	}
 
 	useEffect(() => {
 		// fetchPeople();
-		fetchPlanets();
+		// fetchPlanets();
 	}, []);
 	people.map
 	console.log(people)
