@@ -31,6 +31,7 @@ function Planets() {
                 <Link to={`/views/planets/${index}`}>
                   <Button variant="warning">Learn More</Button>
                 </Link>
+                <Button variant="outline-warning">Warning</Button>{" "}
               </Card.Body>
             </Card>
           );

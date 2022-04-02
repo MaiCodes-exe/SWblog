@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       people: [],
-      planets:[],
+      planets: [],
+      favourites:[],
       demo: [
         {
           title: "FIRST",
@@ -27,6 +28,11 @@ const getState = ({ getStore, getActions, setStore }) => {
         let res = await fetch("https://swapi.dev/api/planets");
         let data = await res.json();
         setStore({ planets: data.results });
+      },
+      addFavourites: (name) => {
+        let favourites = getStore().favourites
+        let newFavourites = [...favourites,name]
+        setStore({favourites: newFavourites})
       },
       loadSomeData: () => {
         /**

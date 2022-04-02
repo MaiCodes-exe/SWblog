@@ -29,8 +29,14 @@ function People() {
                 <p>Gender: {item.gender} </p>
               </Card.Text>
               <Link to={`/views/people/${index}`}>
-              <Button variant="warning">Learn More</Button>
+                <Button variant="warning">Learn More</Button>
               </Link>
+              <Button variant="outline-warning" onClick={() => {
+                actions.addFavourites(item.name)
+              }}>
+                {" "}
+                <i className="fas fa-heart"></i>{" "}
+              </Button>{" "}
             </Card.Body>
           </Card>
         );
