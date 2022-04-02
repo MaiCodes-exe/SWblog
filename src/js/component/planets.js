@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+
 
 function Planets() {
   const { store, actions } = useContext(Context);
@@ -26,7 +28,9 @@ function Planets() {
                   <p>Population: {item.population} </p>
                   <p>Terrain: {item.terrain} </p>
                 </Card.Text>
-                <Button variant="warning">Learn More</Button>
+                <Link to={`/views/planets/${index}`}>
+                  <Button variant="warning">Learn More</Button>
+                </Link>
               </Card.Body>
             </Card>
           );

@@ -9,8 +9,8 @@ import { Container } from "react-bootstrap";
 
 export const Home = (props) => {
 	const [people, setPeople] = useState([]);
-	const [planets, setPlanets] = useState([]);
-
+  const [planets, setPlanets] = useState([]);
+  
 	useEffect(() => {
 		// fetchPeople();
 		// fetchPlanets();
@@ -68,11 +68,4 @@ export const Home = (props) => {
       </div>
     </>
   );
-};
-Home.propTypes = {
-  iud: PropTypes.number,
-  name: PropTypes.string,
-  height: PropTypes.string,
-  homeworld: PropTypes.string,
-  description: PropTypes.string,
 };

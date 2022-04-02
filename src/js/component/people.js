@@ -3,6 +3,7 @@ import { Home } from "../views/home";
 import { Context } from "../store/appContext";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function People() {
   const { store, actions } = useContext(Context);
@@ -27,7 +28,9 @@ function People() {
                 <p>Birth Year: {item.birth_year} </p>
                 <p>Gender: {item.gender} </p>
               </Card.Text>
+              <Link to={`/views/people/${index}`}>
               <Button variant="warning">Learn More</Button>
+              </Link>
             </Card.Body>
           </Card>
         );
