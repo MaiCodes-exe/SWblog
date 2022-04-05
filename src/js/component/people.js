@@ -18,8 +18,8 @@ function People() {
       <div className="d-flex">
       {people.length > 0 && people.map((item, index) => {
         return (
-          <Card style={{ width: "30rem" }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+          <Card style={{ width: "80rem" }} id="card">
+            <Card.Img variant="top" src="https://fakeimg.pl/550x500/" />
             <Card.Body>
               <Card.Title> {item.name} </Card.Title>
               <Card.Text>
@@ -31,9 +31,12 @@ function People() {
               <Link to={`/views/people/${index}`}>
                 <Button variant="warning">Learn More</Button>
               </Link>
-              <Button variant="outline-warning" onClick={() => {
-                actions.addFavourites(item.name)
-              }}>
+              <Button
+                variant="outline-warning"
+                onClick={() => {
+                  actions.addFavourites(item.name);
+                }}
+              >
                 {" "}
                 <i className="fas fa-heart"></i>{" "}
               </Button>{" "}

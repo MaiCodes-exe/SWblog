@@ -54,3 +54,9 @@ a{
     text-align: center;
     
 }
+
+#card{
+    background-color: blue;
+    margin: 5px;
+    padding: 5px;
+}
