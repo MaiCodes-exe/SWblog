@@ -3,10 +3,16 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
+import People from "./people";
 
 export const Navbar = () => {
       const { store, actions } = useContext(Context);
-
+      
+      // function deletePeople(index) {
+      // var delarray = [...people];
+      // delarray.splice(index);
+      // people(delarray);
+      // }
   return (
     <nav className="navbar navbar mb-3" id="nav">
       <div>
@@ -34,6 +40,13 @@ export const Navbar = () => {
               return (
                 <>
                   <Dropdown.Item>{item}</Dropdown.Item>
+                  <button
+                    onClick={() => {
+                      deletePeople(item);
+                    }}
+                  >
+                    <i class="fas fa-trash"></i>{" "}
+                  </button>
                 </>
               );
             })}
