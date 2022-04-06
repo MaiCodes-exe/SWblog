@@ -66,6 +66,7 @@ export const Home = (props) => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      <br></br>
     </>
   );
 };

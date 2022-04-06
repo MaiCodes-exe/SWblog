@@ -15,11 +15,11 @@ function People() {
   return (
     <>
       <h1 id="peep">People</h1>
-      <div className="d-flex">
+      <div className=" container d-flex flex-wrap">
       {people.length > 0 && people.map((item, index) => {
         return (
-          <Card style={{ width: "80rem" }} id="card">
-            <Card.Img variant="top" src="https://fakeimg.pl/550x500/" />
+          <Card style={{ width: "25rem" }} id="card">
+            <Card.Img variant="top" src="https://fakeimg.pl/350x200/" />
             <Card.Body>
               <Card.Title> {item.name} </Card.Title>
               <Card.Text>

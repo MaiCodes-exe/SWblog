@@ -25,8 +25,8 @@ export const Navbar = () => {
           <Link to="/planets">Planets</Link>
         </button>
         <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Dropdown Button
+          <Dropdown.Toggle variant="warning" id="dropdown-basic">
+            <i className="fas fa-heart"></i>{" "}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>

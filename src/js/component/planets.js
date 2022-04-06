@@ -15,27 +15,37 @@ function Planets() {
   return (
     <>
       <h1 id="plan">Planets</h1>
-      <div className="d-flex">
-        {planets.length > 0 && planets.map((item, index) => {
-          return (
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title> {item.name} </Card.Title>
-                <Card.Text>
-                  <p>Climate: {item.climate} </p>
-                  <p>Orbit: {item.orbital_period} </p>
-                  <p>Population: {item.population} </p>
-                  <p>Terrain: {item.terrain} </p>
-                </Card.Text>
-                <Link to={`/views/planets/${index}`}>
-                  <Button variant="warning">Learn More</Button>
-                </Link>
-                <Button variant="outline-warning">Warning</Button>{" "}
-              </Card.Body>
-            </Card>
-          );
-        })}
+      <div className="container d-flex flex-wrap" id="display">
+        {planets.length > 0 &&
+          planets.map((item, index) => {
+            return (
+              <Card style={{ width: "25rem" }} id="card">
+                <Card.Img variant="top" src="https://fakeimg.pl/350x200/" />
+
+                <Card.Body>
+                  <Card.Title> {item.name} </Card.Title>
+                  <Card.Text>
+                    <p>Climate: {item.climate} </p>
+                    <p>Orbit: {item.orbital_period} </p>
+                    <p>Population: {item.population} </p>
+                    <p>Terrain: {item.terrain} </p>
+                  </Card.Text>
+                  <Link to={`/views/planets/${index}`}>
+                    <Button variant="warning">Learn More</Button>
+                  </Link>
+                  <Button
+                    variant="outline-warning"
+                    onClick={() => {
+                      actions.addFavourites(item.name);
+                    }}
+                  >
+                    {" "}
+                    <i className="fas fa-heart"></i>{" "}
+                  </Button>{" "}
+                </Card.Body>
+              </Card>
+            );
+          })}
       </div>
     </>
   );
