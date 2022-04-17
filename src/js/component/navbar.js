@@ -10,7 +10,7 @@ export const Navbar = () => {
       
       function deletePeople(item) {
       var delarray = [...favourites];
-      delarray.splice(item);
+        delarray.splice(item);
       favourites(delarray);
       }
   return (
