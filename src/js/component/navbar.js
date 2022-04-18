@@ -8,11 +8,11 @@ import People from "./people";
 export const Navbar = () => {
       const { store, actions } = useContext(Context);
       
-      function deletePeople(item) {
-      var delarray = [...favourites];
-        delarray.splice(item);
-      favourites(delarray);
-      }
+      // function deletePeople(item) {
+      // var delarray = [...favourites];
+      //   delarray.splice(item);
+      // favourites(delarray);
+      // }
   return (
     <nav className="navbar navbar mb-3" id="nav">
       <div>
@@ -42,7 +42,7 @@ export const Navbar = () => {
                   <Dropdown.Item>{item}</Dropdown.Item>
                   <button
                     onClick={() => {
-                      deletePeople(item, index);
+                      actions.deleteFavourites(item);
                     }}
                   >
                     <i class="fas fa-trash"></i>{" "}

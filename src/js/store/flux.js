@@ -31,8 +31,21 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       addFavourites: (name) => {
         let favourites = getStore().favourites
-        let newFavourites = [...favourites,name]
-        setStore({favourites: newFavourites})
+        let select = favourites.find(item => item == name)
+        if (!select) {
+        let newFavourites = [...favourites, name];
+        setStore({ favourites: newFavourites });
+        }
+      },
+      deleteFavourites: (name) => {
+        let favourites = getStore().favourites
+        let delFavs = favourites.filter((item, index) => {
+          if (item != name) {
+            return item
+          }
+        })
+          setStore({favourites: delFavs})
+
       },
       loadSomeData: () => {
         /**
